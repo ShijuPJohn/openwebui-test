@@ -457,21 +457,21 @@
 			? ''
 			: 'invisible'}"
 	>
-		<div class="px-1.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400  h-16 ">
+		<div class="px-1.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
 			<button
 				class=" cursor-pointer p-[7px] flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-900 transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
 			>
-				<div class=" m-auto self-center ">
+				<div class=" m-auto self-center">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="2"
 						stroke="currentColor"
-						class="size-5 dark:text-purple-500"
+						class="size-5"
 					>
 						<path
 							stroke-linecap="round"
@@ -500,20 +500,20 @@
 				}}
 			>
 				<div class="flex items-center">
-<!--					<div class="self-center mx-1.5">-->
-<!--						<img-->
-<!--							crossorigin="anonymous"-->
-<!--							src="{WEBUI_BASE_URL}/static/nicon.png"-->
-<!--							class=" size-5 -translate-x-1.5 rounded-full"-->
-<!--							alt="logo"-->
-<!--						/>-->
-<!--					</div>-->
-					<div class=" self-center font-medium text-sm lg:text-[1.5rem] uppercase text-purple-800 dark:text-purple-500 font-primary">
+					<div class="self-center mx-1.5">
+						<img
+							crossorigin="anonymous"
+							src="{WEBUI_BASE_URL}/static/favicon.png"
+							class=" size-5 -translate-x-1.5 rounded-full"
+							alt="logo"
+						/>
+					</div>
+					<div class=" self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
 						{$i18n.t('CareWizard')}
 					</div>
 				</div>
 
-				<div class="dark:text-purple-500">
+				<div>
 					<PencilSquare className=" size-5" strokeWidth="2" />
 				</div>
 			</a>
@@ -554,11 +554,11 @@
 				draggable="false"
 			>
 				<div class="self-center">
-					<MagnifyingGlass strokeWidth="2" className="size-[1.5rem]" />
+					<MagnifyingGlass strokeWidth="2" className="size-[1.1rem]" />
 				</div>
 
 				<div class="flex self-center translate-y-[0.5px]">
-					<div class=" self-center font-medium text-sm lg:text-xl font-primary">{$i18n.t('Search')}</div>
+					<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Search')}</div>
 				</div>
 			</button>
 		</div>
@@ -580,7 +580,7 @@
 				>
 					<div class="self-center">
 						<svg
-							class="size-6"
+							class="size-4"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -599,7 +599,7 @@
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm lg:text-xl font-primary">{$i18n.t('Notes')}</div>
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Notes')}</div>
 					</div>
 				</a>
 			</div>
@@ -627,7 +627,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="2"
 							stroke="currentColor"
-							class="size-[1.5rem]"
+							class="size-[1.1rem]"
 						>
 							<path
 								stroke-linecap="round"
@@ -638,14 +638,14 @@
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm lg:text-xl font-primary">{$i18n.t('Workspace')}</div>
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
 					</div>
 				</a>
 			</div>
 		{/if}
 
 		<div
-			class="relative flex flex-col flex-1  overflow-y-auto overflow-x-hidden {$temporaryChatEnabled
+			class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden {$temporaryChatEnabled
 				? 'opacity-20'
 				: ''}"
 		>
@@ -677,12 +677,12 @@
 			{/if}
 
 			<Folder
-				className="px-2 mt-0.5 text-sm "
+				className="px-2 mt-0.5"
 				name={$i18n.t('Chats')}
 				onAdd={() => {
 					createFolder();
 				}}
-				onAddLabel={$i18n.t('Add New Resident')}
+				onAddLabel={$i18n.t('New Folder')}
 				on:import={(e) => {
 					importChatHandler(e.detail);
 				}}
