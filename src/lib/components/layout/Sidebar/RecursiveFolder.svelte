@@ -395,7 +395,7 @@
 					{/if}
 				</div>
 
-				<div class="translate-y-[0.5px] flex-1 justify-start text-start line-clamp-1">
+				<div class="translate-y-[0.5px] flex-1 justify-start text-start line-clamp-1 text-sm lg:text-[1.1rem]">
 					{#if edit}
 						<input
 							id="folder-{folderId}-input"
